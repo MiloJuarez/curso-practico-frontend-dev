@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shopping cart</title>
+    <style>
+      :root {
+        --black: #000000;
+        --white: #ffffff;
+        --very-light-pink: #c7c7c7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #acd9b2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      .product-detail {
+        position: absolute;
+        right: 0;
+        width: 360px;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+      .title-container {
+        display: flex;
+      }
+      .title-container img {
+        transform: rotate(180deg);
+        margin-right: 14px;
+      }
+      .title {
+        font-size: var(--lg);
+        font-weight: bold;
+      }
+      .order {
+        display: grid;
+        margin-bottom: 24px;
+        padding: 0 24px;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        align-items: center;
+        background-color: var(--text-input-field);
+        border-radius: 8px;
+      }
+      .order p:first-child {
+        display: flex;
+        flex-direction: column;
+      }
+      .order p span:first-child {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .order p:nth-child(2) {
+        text-align: end;
+        font-weight: bold;
+      }
+      .shopping-cart {
+        display: grid;
+        margin-bottom: 24px;
+        grid-template-columns: auto 1fr auto auto;
+        align-items: center;
+        gap: 16px;
+      }
+      .shopping-cart p:nth-child(2) {
+        color: var(--very-light-pink);
+      }
+      .shopping-cart p:nth-child(3) {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .shopping-cart figure {
+        margin: 0;
+      }
+      .shopping-cart figure img {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .primary-button {
+        width: 100%;
+        height: 50px;
+        font-size: var(--md);
+        font-weight: bold;
+        background-color: var(--hospital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+      }
+      .add-to-cart-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 640px) {
+        .product-detail {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="product-detail">
+      <div class="title-container">
+        <img src="./assets/icons/arrow.svg" alt="arrow" />
+        <p class="title">My order</p>
+      </div>
+      <div class="my-order-content">
+        <article class="shopping-cart">
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              alt="Bike"
+            />
+          </figure>
+          <p>Bike</p>
+          <p>$60.00</p>
+          <img src="./assets/icons/icon_close.png" alt="close" />
+        </article>
+
+        <article class="shopping-cart">
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/4922619/pexels-photo-4922619.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              alt="Helmet"
+            />
+          </figure>
+          <p>Helmet</p>
+          <p>$15.00</p>
+          <img src="./assets/icons/icon_close.png" alt="close" />
+        </article>
+
+        <article class="shopping-cart">
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/10110754/pexels-photo-10110754.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+              alt="Biker"
+            />
+          </figure>
+          <p>Biker</p>
+          <p>$40.00</p>
+          <img src="./assets/icons/icon_close.png" alt="close" />
+        </article>
+
+        <article class="order">
+          <p>
+            <span>Total</span>
+          </p>
+          <p>$115.00</p>
+        </article>
+
+        <button class="primary-button">Checkout</button>
+      </div>
+    </aside>
+  </body>
+</html>
